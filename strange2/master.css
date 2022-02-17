@@ -9,15 +9,14 @@ body{
 }
 
 #poster{
-    text-align:center;
     z-index: 1;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: 0px;
-    margin-bottom:0px;
-    height: 100vh;
+    position: relative;
+    margin-top: auto;
+    margin-bottom:auto;
+    height: auto;
+    max-height: 100vh;
     width: auto;
+    max-width: 100%;
 }
 
 #counter{
