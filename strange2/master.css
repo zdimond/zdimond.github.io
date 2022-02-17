@@ -10,9 +10,6 @@ body{
 
 #poster{
     z-index: 1;
-    position: relative;
-    margin-top: auto;
-    margin-bottom:auto;
     height: auto;
     max-height: 100vh;
     width: auto;
