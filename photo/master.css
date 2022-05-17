@@ -72,8 +72,8 @@ h1, h2, h3, h4, h5, h6, p{
 /******************* Header styling ********************/
 
 .header{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://live.staticflickr.com/65535/52070133800_79c4488bf8_k.jpg") center/cover no-repeat;
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://live.staticflickr.com/65535/52068609317_702bfa3fd8_k.jpg") center/cover no-repeat;
     color: #fff;
 }
 .top-nav a{
