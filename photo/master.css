@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .header{
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/zach.jpeg") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://live.staticflickr.com/65535/52070133800_79c4488bf8_k.jpg") center/cover no-repeat;
     color: #fff;
 }
 .top-nav a{
@@ -263,7 +263,7 @@ blockquote span{
     column-gap: 20px;
 }
 .work-img-1{
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("images/zach.jpeg") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("https://live.staticflickr.com/65535/52069663353_aca5197247_k.jpg") center/cover no-repeat;
     height: 400px;
     transition: var(--transition);
 }
