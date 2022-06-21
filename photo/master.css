@@ -96,6 +96,9 @@ h1, h2, h3, h4, h5, h6, p{
     letter-spacing: 5px;
     cursor: pointer;
 }
+.brand-name a{
+    color: var(--white);
+}
 .navBtn{
     width: 40px;
     height: 40px;
@@ -476,28 +479,9 @@ blockquote span{
         transform: translateY(0);
         background: transparent;
     }
-    .top-nav ul{
-        display: flex;
-    }
-    .top-nav ul li{
-        margin-right: 30px;
-        margin-left: 30px;
-    }
+
     .about{
         margin-top: 0;
-    }
-    .search-icon{
-        flex: 0 0 10%;
-        display: block;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
-        cursor:pointer;
-        transition: var(--transition);
-    }
-    .search-icon i:hover{
-        transform: scale(1.2);
     }
 }
 
