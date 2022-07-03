@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>JavaScript Practice</title>
+</head>
+
+<body>
+    <div class="container-1">
+        <h2>Challenge 1: Your Age in Days</h2>
+        <div class="flex-box-container-1">
+            <div>
+                <button class="btn btn-primary" onClick="ageInDays()">Click me</button>
+            </div>
+            <div>
+                <button class="btn btn-danger" onclick="reset()">Reset</button>
+            </div>
+        </div>
+        <div class="flex-box-container-1">
+            <div id="flex-box-result"></div>
+        </div>
+    </div>
+    <div class="container-2">
+        <h2>Challenge 2: Cat Generator</h2>
+        <button class="btn btn-success" id="cat-generator" onClick="generateCat()">Generate Cat!</button>
+        <div class="flex-box-container-2" id="cat-result">
+        </div>
+    </div>
+    <div class="container-3">
+        <h2>Challenge 3: Rock Paper Scissors</h2>
+
+        <div class="flex-box-container-3">
+            <div class="flex-box-rps" id="flex-box-div-rock">
+                <img id="rock"
+                    src="https://t4.ftcdn.net/jpg/00/83/38/71/360_F_83387150_FDI6pLrHG880an3NjgsU2B3iqTVtGMIL.jpg"
+                    style="height:225px" onclick="rpsGame(this)">
+            </div>
+            <div class="flex-box-rps" id="flex-box-div-paper">
+                <img id="paper"
+                    src="https://www.nicepng.com/png/detail/25-254198_jpg-royalty-free-download-collection-of-piece-high.png"
+                    style="height:225px" onclick="rpsGame(this)">
+            </div>
+            <div class="flex-box-rps" id="flex-box-div-scissors">
+                <img id="scissors"
+                    src="https://as2.ftcdn.net/v2/jpg/04/30/56/79/1000_F_430567900_EIpxMi5lZgEB0CqvRBcfVvttcknX9MxE.jpg"
+                    style="height:225px" onclick="rpsGame(this)">
+            </div>
+        </div>
+
+    </div>
+    <div class="container-4">
+        <h2 id="change-my-color">Challenge 4: Change the Color of all Buttons!</h2>
+        <div class="flex-box-pick-color">
+            <form action="">
+                <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                    <option value="none" selected disabled>Change buttons to...</option>
+                    <option value="random">Surprise me!</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset">Reset</option>
+                </select>
+            </form>
+            <button class="btn btn-primary">Disney+</button>
+            <button class="btn btn-danger">Netflix</button>
+            <button class="btn btn-warning">Prime Video</button>
+            <button class="btn btn-success">Hulu</button>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
+    </div>
+</body>
+
+</html>
