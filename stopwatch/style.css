@@ -1,0 +1,43 @@
+body {
+    background: rgb(194, 222, 209);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+.container-1 {
+    margin: auto;
+}
+
+#timer-text {
+    text-align: center;
+    color: rgb(53, 66, 89);
+}
+
+.stopwatch-buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button {
+    background: rgb(236, 229, 199);
+    color: rgb(53, 66, 89);
+    border: none;
+    border-radius: 5%;
+    margin: 5px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+    display: block;
+    padding: 15px 30px;
+}
+
+button:hover {
+    background: rgb(205, 194, 174);
+    transition-duration: .4s;
+    cursor: pointer;
+}
