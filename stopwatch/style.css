@@ -26,12 +26,11 @@ h1 {
 }
 
 .container-1 {
-    margin: auto;
+    margin: 150px auto auto auto;
     width: 100%;
 }
 
 #timer {
-    margin-top: 150px;
     width: 100%;
 }
 
@@ -100,8 +99,10 @@ h1 {
         font-size: 11.842vw;
     }
 
-    #timer {
-        margin-top: 19.737vw;
+    .container-1 {
+        margin: auto;
+        position: absolute;
+        top: 19.737vw;
     }
 
     .sw-btn {
