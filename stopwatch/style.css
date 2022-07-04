@@ -3,6 +3,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: none;
+    padding: 150px;
 }
 
 h1 {
