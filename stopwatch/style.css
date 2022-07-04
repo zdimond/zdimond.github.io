@@ -60,7 +60,7 @@ h1 {
     width: 160px;
 }
 
-button:hover {
+.sw-btn:hover {
     background: rgb(205, 194, 174);
     transition-duration: .4s;
     cursor: pointer;
@@ -87,16 +87,29 @@ button:hover {
 }
 
 @media (hover: none) {
-    button {
-        background: rgb(236, 229, 199)!important;
+    .sw-btn {
+        background: rgb(236, 229, 199) !important;
     }
 }
 
-/* @media only screen and (max-width: 595px) {
+/************** CSS Breakpoints **************/
+
+@media screen and (max-width: 760px) {
 
     h1 {
+        font-size: 11.842vw;
+    }
 
-    } 
+    .sw-btn {
+        width: 21.053vw;
+        font-size: 4.605vw;
+        margin: 0px 1.316vw 3.289vw 1.316vw;
+        padding: 1.974vw 3.947vw;
+    }
 
-
-} */
+    #lap-display pip {
+        padding: 1.316vw 2.632vw;
+        border-top: 0.329vw solid rgb(236, 229, 199);
+        font-size: 5.263vw;
+    }
+}
