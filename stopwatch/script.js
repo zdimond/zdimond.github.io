@@ -47,7 +47,7 @@ function stopwatchLapReset() {
         removeChildren({ parentId: 'lap-display', childName: 'pip' }); // gets rid of all the laps that have been added
         laps = 0; // resets lap # counter
         clearInterval(restID);
-        document.getElementById("sprite").style.background = `url('assets/idle.png') -2px 0px`
+        document.getElementById("sprite").style.background = `url('https://zachdimond.com/stopwatch/assets/Idle.png') -2px 0px`
     } else if (timerRunning == true) {
         laps++; // adds a lap
         let pip = document.createElement("pip"); // creates lap containers
@@ -99,7 +99,7 @@ function runningSprite() {
     clearInterval(restID);
 
     runID = setInterval(function () {
-        document.getElementById("sprite").style.background = `url('assets/walk.png') -${position}px 0px`
+        document.getElementById("sprite").style.background = `url('https://zachdimond.com/stopwatch/assets/Walk.png') -${position}px 0px`
         if (position < 192) {
             position = position + 80;
         } else {
@@ -114,7 +114,7 @@ function restingSprite() {
     clearInterval(runID);
 
     restID = setInterval(function () {
-        document.getElementById("sprite").style.background = `url('assets/idle.png') -${position}px 0px`
+        document.getElementById("sprite").style.background = `url('https://zachdimond.com/stopwatch/assets/Idle.png') -${position}px 0px`
         if (position < 192) {
             position = position + 80;
         } else {

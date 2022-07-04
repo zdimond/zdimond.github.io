@@ -19,7 +19,7 @@ h1 {
 #sprite {
     height: 45px;
     width: 46px;
-    background: url("assets/idle.png") -2px 0px;
+    background: url("https://zachdimond.com/stopwatch/assets/Idle.png") -2px 0px;
     background-size: cover !important;
     border-bottom: 2.5px solid #2d5d7b;
     box-shadow: 0px 4px 2px -2px  #2d5d7b;
