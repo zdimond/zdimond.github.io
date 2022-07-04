@@ -4,6 +4,7 @@ document.getElementById("timer-text").innerHTML = runWatch; // inserts base stat
 let timerRunning;
 let startTime;
 let angle = 100; // this variable is used in the movingBagroung() function. Not sure of a better way to do this.
+let laps = 0;
 
 function stopwatchStart() {
     if (runWatch == "00:00.00") {
@@ -29,14 +30,13 @@ function stopwatchStart() {
 
 function stopwatchStop() {
     clearInterval(x); // ceases the every-millisecond stopwatch
-    timerPaused = true;
-    timerRunning = false;
     unpausedRunWatch = runWatch; // stores the value of time elapsed for when you unpause the stopwatch
     lapToReset();
+    timerPaused = true;
+    timerRunning = false;
 }
 
 function stopwatchLapReset() {
-    let laps = 0;
     if (timerRunning == false) {
         runWatch = "00:00.00" // resets the stopwatch (to a *string*, yeah yeah, I know)
         document.getElementById("timer-text").innerHTML = runWatch; // prints the new stopwatch value to the HTML doc
