@@ -1,15 +1,21 @@
 body {
-    background: rgb(194, 222, 209);
+    background: linear-gradient(100deg, rgba(162, 197, 254, 1) 0%, rgba(194, 233, 252, 1) 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 h1 {
     font-size: 90px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .container-1 {
     margin: auto;
+}
+
+#timer {
+    margin-top: 50%;
 }
 
 #timer-text {
@@ -17,27 +23,48 @@ h1 {
     color: rgb(53, 66, 89);
 }
 
-.stopwatch-buttons {
+#stopwatch-controls {
     display: flex;
     justify-content: space-between;
-
 }
 
-button {
+.sw-btn {
     background: rgb(236, 229, 199);
     color: rgb(53, 66, 89);
     border: none;
-    border-radius: 5%;
-    margin: 5px;
+    border-radius: 6px;
+    margin: 0px 10px 25px 10px;
     font-size: 35px;
     text-align: center;
     font-weight: 600;
     display: block;
     padding: 15px 30px;
+    font-family: 'Roboto', sans-serif;
+    width: 160px;
 }
 
 button:hover {
     background: rgb(205, 194, 174);
     transition-duration: .4s;
     cursor: pointer;
+}
+
+#lap-display {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+#lap-display pip {
+    margin: auto;
+    padding: 10px 20px;
+    width: auto;
+    border-top: 2px solid rgb(236, 229, 199);
+    color: rgb(53, 66, 89);
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#lap-display :last-child {
+    border-top:none!important;
 }
