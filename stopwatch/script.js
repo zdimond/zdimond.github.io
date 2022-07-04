@@ -1,21 +1,17 @@
-let runWatch = "00:00.00"
-document.getElementById("timer-text").innerHTML = runWatch;
+let runWatch = "00:00.00" // base state for stopwatch timer
+document.getElementById("timer-text").innerHTML = runWatch; // inserts base state for stopwatch
+
 let timerRunning;
 let startTime;
-let angle = 100;
-let laps = 0; // this is a variable in the function 
+let angle = 100; // this variable is used in the movingBagroung() function. Not sure of a better way to do this.
 
 function stopwatchStart() {
     if (runWatch == "00:00.00") {
         startTime = new Date().getTime(); // establishes the starting time
         x = setInterval(function () { // at an established interval,
             movingBackground();
-            runWatch = Date.now() - startTime;
-            distanceMinutes = Math.floor((runWatch % (1000 * 60 * 60)) / (1000 * 60)); // the difference between now and the starting time
-            distanceSeconds = Math.floor((runWatch % (1000 * 60)) / 1000);
-            distanceCenti = Math.floor((runWatch % 1000) / 10);
-            runWatchFormatted = distanceMinutes.toLocaleString(undefined, { minimumIntegerDigits: 2 }) + ":" + distanceSeconds.toLocaleString(undefined, { minimumIntegerDigits: 2 }) + "." + distanceCenti.toLocaleString(undefined, { minimumIntegerDigits: 2 });
-            document.getElementById("timer-text").innerHTML = runWatchFormatted // is printed to the doc
+            runWatch = Date.now() - startTime; // finds the amount of time between now and when the watch began
+            formatRunWatch(); // nicely puts the info on the stopwatch
         }, 10);
         timerRunning = true;
         resetToLap();
@@ -23,12 +19,8 @@ function stopwatchStart() {
         startTime = new Date().getTime(); // establishes the starting time
         x = setInterval(function () { // at an established interval,
             movingBackground();
-            runWatch = Date.now() - startTime + unpausedRunWatch;
-            distanceMinutes = Math.floor((runWatch % (1000 * 60 * 60)) / (1000 * 60)); // the difference between now and the starting time
-            distanceSeconds = Math.floor((runWatch % (1000 * 60)) / 1000);
-            distanceCenti = Math.floor((runWatch % 1000) / 10);
-            runWatchFormatted = distanceMinutes.toLocaleString(undefined, { minimumIntegerDigits: 2 }) + ":" + distanceSeconds.toLocaleString(undefined, { minimumIntegerDigits: 2 }) + "." + distanceCenti.toLocaleString(undefined, { minimumIntegerDigits: 2 });
-            document.getElementById("timer-text").innerHTML = runWatchFormatted // is printed to the doc
+            runWatch = Date.now() - startTime + unpausedRunWatch; // finds the amount of time between now and when the watch began (while accounting for the time already elapsed pre-pause)
+            formatRunWatch(); // nicely puts the info on the stopwatch
         }, 10);
         timerRunning = true;
         resetToLap();
@@ -36,25 +28,26 @@ function stopwatchStart() {
 }
 
 function stopwatchStop() {
-    clearInterval(x);
+    clearInterval(x); // ceases the every-millisecond stopwatch
     timerPaused = true;
     timerRunning = false;
-    unpausedRunWatch = runWatch;
+    unpausedRunWatch = runWatch; // stores the value of time elapsed for when you unpause the stopwatch
     lapToReset();
 }
 
 function stopwatchLapReset() {
+    let laps = 0;
     if (timerRunning == false) {
-        runWatch = "00:00.00"
-        document.getElementById("timer-text").innerHTML = runWatch;
-        removeChildren({parentId:'lap-display',childName:'pip'});
-        laps = 0;
+        runWatch = "00:00.00" // resets the stopwatch (to a *string*, yeah yeah, I know)
+        document.getElementById("timer-text").innerHTML = runWatch; // prints the new stopwatch value to the HTML doc
+        removeChildren({parentId:'lap-display',childName:'pip'}); // gets rid of all the laps that have been added
+        laps = 0; // resets lap # counter
     } else if (timerRunning == true) {
-        laps++;
-        let pip = document.createElement("pip");
-        let lap = document.createTextNode("Lap " + laps + '\xa0'.repeat(20) + runWatchFormatted); // Print "lap x - 00:00.00" below
-        pip.appendChild(lap);
-        document.getElementById("lap-display").appendChild(pip);
+        laps++; // adds a lap
+        let pip = document.createElement("pip"); // creates lap containers
+        let lap = document.createTextNode("Lap " + laps + '\xa0'.repeat(20) + runWatchFormatted); // creates "lap x - 00:00.00" 
+        pip.appendChild(lap); 
+        document.getElementById("lap-display").appendChild(pip); // puts dem pips in dere
     }
 }
 
@@ -66,12 +59,12 @@ function resetToLap() {
     document.getElementById("reset").textContent = "Lap";
 }
 
-function movingBackground() {
+function movingBackground() { // this fun lil function makes it so that the background subtly changes while the stopwatch runs
     angle = angle + .6;
     document.body.style.background =  "linear-gradient(" + angle + "deg, rgba(162,197,254,1) 0%, rgba(194,233,252,1) 100%)";
 }
 
-function removeChildren (params){
+function removeChildren (params){ // removes all the laps previously established (used in the stopwatchLapReset() function)
     let parentId = params.parentId;
     let childName = params.childName;
 
@@ -80,4 +73,12 @@ function removeChildren (params){
         let childNode = childNodesToRemove[i];
         childNode.parentNode.removeChild(childNode);
     }
+}
+
+function formatRunWatch () {
+    distanceMinutes = Math.floor((runWatch % (1000 * 60 * 60)) / (1000 * 60)); // the difference between now and the starting time
+    distanceSeconds = Math.floor((runWatch % (1000 * 60)) / 1000);
+    distanceCenti = Math.floor((runWatch % 1000) / 10);
+    runWatchFormatted = distanceMinutes.toLocaleString(undefined, { minimumIntegerDigits: 2 }) + ":" + distanceSeconds.toLocaleString(undefined, { minimumIntegerDigits: 2 }) + "." + distanceCenti.toLocaleString(undefined, { minimumIntegerDigits: 2 });
+    document.getElementById("timer-text").innerHTML = runWatchFormatted // is printed nicely to the doc
 }

@@ -59,9 +59,9 @@ button:hover {
     margin: auto;
     padding: 10px 20px;
     width: auto;
-    border-top: 2px solid rgb(236, 229, 199);
+    border-top: 2.5px solid rgb(236, 229, 199);
     color: rgb(53, 66, 89);
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Roboto', sans-serif;
 }
 
