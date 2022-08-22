@@ -1,0 +1,21 @@
+#main-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10% 5%;
+}
+
+.therapist-block {
+    width: 16vw;
+    height: fit-content;
+    text-align: center;
+}
+
+.therapist-block img{
+    width: 80%;
+}
+
+.therapist-name {
+    font-size:28px;
+    font-weight:500;
+}
