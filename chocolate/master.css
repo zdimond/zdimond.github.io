@@ -1,3 +1,0 @@
-body{
-    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='61' height='61' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform=''%3E%3Crect width='100%25' height='100%25' fill='%235D4037'/%3E%3Cpath d='M0 40h-10v-60h60L40 0L34 6h-28v28z' fill='%233E2723'/%3E%3Cpath d='M40 0v10h60v60L0 40L6 34h28v-28z' fill='%23795548'/%3E%3Cpath d='M40 0v10h60v60L0 40L0 40h40v-40z' fill='%233E2723'/%3E%3Cpath d='M0 40h-10v-60h60L40 0L40 0h-40v40z' fill='%23795548'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
-}
